@@ -14,10 +14,10 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { name: "Features", href: "#features" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Benefits", href: "#benefits" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "Marketplace", href: "/marketplace" },
+    { name: "Publish Patent", href: "/publish" },
+    { name: "Dashboard", href: "/dashboard" },
+    { name: "How It Works", href: "/#how-it-works" },
   ];
 
   return (
