@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import WalletButton from "./WalletButton";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+      document.documentElement.classList.add("dark");
+    }, []);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -26,7 +30,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-12">
             <a href="/" className="text-2xl font-bold gradient-text" data-testid="link-home">
-              IPToken
+              IdeaVault
             </a>
             
             <div className="hidden md:flex items-center gap-6">

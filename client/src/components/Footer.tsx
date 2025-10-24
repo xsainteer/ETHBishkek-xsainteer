@@ -42,7 +42,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 gradient-text">IPToken</h3>
+            <h3 className="text-2xl font-bold mb-4 gradient-text">IdeaVault</h3>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Built for the Future of IP. Secure, tokenize, and monetize your intellectual property on the blockchain.
             </p>
@@ -165,7 +165,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2025 IPToken. All rights reserved.</p>
+          <p>© 2025 IdeaVault. All rights reserved.</p>
         </div>
       </div>
     </footer>
