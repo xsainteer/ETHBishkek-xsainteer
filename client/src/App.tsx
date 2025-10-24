@@ -8,6 +8,9 @@ import Dashboard from "@/pages/Dashboard";
 import Marketplace from "@/pages/Marketplace";
 import PublishPatent from "@/pages/PublishPatent";
 import NotFound from "@/pages/not-found";
+import { WagmiProvider } from 'wagmi'
+import { config } from './lib/wagmiConfig'
+import { Web3Provider } from "./lib/Web3Provider";
 
 function Router() {
   return (
@@ -23,12 +26,14 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <Web3Provider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </Web3Provider>
   );
 }
 
