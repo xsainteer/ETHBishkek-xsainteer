@@ -94,23 +94,28 @@ export default function IPSubmissionForm() {
         </div>
         
         <div className="space-y-2">
-          <Label>Supporting Documents</Label>
-          <div className="border-2 border-dashed rounded-lg p-8 text-center hover-elevate cursor-pointer transition-colors">
-            <Upload className="w-12 h-12 mx-auto mb-4 text-muted-foreground" />
-            <p className="text-sm text-muted-foreground mb-2">
-              Click to upload or drag and drop
-            </p>
-            <p className="text-xs text-muted-foreground">
-              PDF, DOC, or TXT (max 10MB)
-            </p>
-            <Input
-              type="file"
-              className="hidden"
-              accept=".pdf,.doc,.docx,.txt"
-              data-testid="input-file-upload"
-            />
-          </div>
-        </div>
+  <Label>Supporting Documents</Label>
+  <label
+    htmlFor="file-upload"
+    className="border-2 border-dashed rounded-lg p-8 text-center cursor-pointer hover:bg-muted/20 transition-colors block"
+  >
+    <Upload className="w-12 h-12 mx-auto mb-4 text-muted-foreground" />
+    <p className="text-sm text-muted-foreground mb-2">
+      Click to upload or drag and drop
+    </p>
+    <p className="text-xs text-muted-foreground">
+      PDF, DOC, or TXT (max 10MB)
+    </p>
+  </label>
+  <Input
+    id="file-upload"
+    type="file"
+    className="hidden"
+    accept=".pdf,.doc,.docx,.txt"
+    onChange={(e) => console.log(e.target.files[0])}
+  />
+</div>
+
         
         <div className="flex gap-4 pt-4">
           <Button 
