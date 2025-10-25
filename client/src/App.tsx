@@ -8,8 +8,6 @@ import Dashboard from "@/pages/Dashboard";
 import Marketplace from "@/pages/Marketplace";
 import PublishPatent from "@/pages/PublishPatent";
 import NotFound from "@/pages/not-found";
-import { WagmiProvider } from 'wagmi'
-import { config } from './lib/wagmiConfig'
 import { Web3Provider } from "./lib/Web3Provider";
 
 function Router() {
